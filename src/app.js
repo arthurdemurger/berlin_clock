@@ -1,6 +1,7 @@
-export class Main {
+export class BerlinClock {
 
-	berlinClock() {
-
+	convert_to_berlin_time(timestamp) {
+		return ("");
 	}
+
 }
