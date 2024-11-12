@@ -9,28 +9,26 @@ export class BerlinClock {
 	}
 
 	simples_minutes(timestamp) {
-		if (timestamp % 5 === 0) {
+		const minutes = timestamp % 5;
+
+		if (minutes === 0) {
 			return ("OOOO");
 		}
 
-		if (timestamp === 1) {
+		if (minutes === 1) {
 			return ("JOOO");
 		}
 
-		if (timestamp === 2) {
+		if (minutes === 2) {
 			return ("JJOO");
 		}
 
-		if (timestamp === 3) {
+		if (minutes === 3) {
 			return ("JJJO");
 		}
 
-		if (timestamp === 4) {
+		if (minutes === 4) {
 			return ("JJJJ");
-		}
-
-		if (timestamp === 6) {
-			return ("JOOO");
 		}
 	}
 }
