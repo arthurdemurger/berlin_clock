@@ -10,6 +10,10 @@ export class BerlinClock {
 
 
 	simples_hours(time_in_hours) {
+		if (time_in_hours === 0 || time_in_hours === 5) {
+			return ("0000");
+		}
+
 		if (time_in_hours === 1) {
 			return ("ROOO");
 		}
@@ -25,8 +29,6 @@ export class BerlinClock {
 		if (time_in_hours === 4) {
 			return ("RRRR");
 		}
-
-		return ("OOOO");
 	}
 
 
