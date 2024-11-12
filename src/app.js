@@ -9,27 +9,28 @@ export class BerlinClock {
 	}
 
 	five_hours_blocks(time_in_hours) {
-		if (time_in_hours >= 25) {
+		const hours = time_in_hours % 24;
+		const hours_blocks = Math.floor(hours / 5);
+
+		if (hours_blocks === 0) {
 			return ("OOOO");
 		}
 
-		if (time_in_hours >= 20) {
-			return ("RRRR");
+		if (hours_blocks === 1) {
+			return ("ROOO");
 		}
-
-		if (time_in_hours >= 15) {
-			return ("RRRO");
-		}
-
-		if (time_in_hours >= 10) {
+		
+		if (hours_blocks === 2) {
 			return ("RROO");
 		}
 
-		if (time_in_hours >= 5) {
-			return ("ROOO");
+		if (hours_blocks === 3) {
+			return ("RRRO");
 		}
-
-		return ("OOOO");
+		
+		if (hours_blocks === 4) {
+			return ("RRRR");
+		}
 	}
 
 	simples_hours(time_in_hours) {
@@ -39,19 +40,19 @@ export class BerlinClock {
 			return ("OOOO");
 		}
 
-		if (time_in_hours === 1) {
+		if (hours === 1) {
 			return ("ROOO");
 		}
 		
-		if (time_in_hours === 2) {
+		if (hours === 2) {
 			return ("RROO");
 		}
 
-		if (time_in_hours === 3) {
+		if (hours === 3) {
 			return ("RRRO");
 		}
 		
-		if (time_in_hours === 4) {
+		if (hours === 4) {
 			return ("RRRR");
 		}
 	}
