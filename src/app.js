@@ -9,6 +9,9 @@ export class BerlinClock {
 	}
 
 	five_minutes_blocks(time_in_minutes) {
+		if (time_in_minutes >= 35) {
+			return ("JJRJJRJOOOO");
+		}
 		if (time_in_minutes >= 30) {
 			return ("JJRJJROOOOO");
 		}

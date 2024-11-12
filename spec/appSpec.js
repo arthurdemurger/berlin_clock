@@ -136,4 +136,10 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("JJRJJROOOOO");
 	});
+
+	it("five_minutes_blocks should return JJRJJROOOOO when given 35", function() {
+		let result = berlin_clock.five_minutes_blocks(35);
+
+		expect(result).toBe("JJRJJRJOOOO");
+	});
 });
