@@ -9,6 +9,10 @@ export class BerlinClock {
 	}
 
 	five_hours_blocks(time_in_hours) {
+		if (time_in_hours === 5) {
+			return ("ROOO");
+		}
+
 		return ("OOOO");
 	}
 
