@@ -113,15 +113,21 @@ describe("Berlin Clock function", function() {
 		expect(result).toBe("JJRJOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJOOOOOOO when given 25", function() {
+	it("five_minutes_blocks should return JJRJJOOOOOO when given 25", function() {
 		let result = berlin_clock.five_minutes_blocks(25);
 
 		expect(result).toBe("JJRJJOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJOOOOOOO when given 26", function() {
+	it("five_minutes_blocks should return JJRJJOOOOOO when given 26", function() {
 		let result = berlin_clock.five_minutes_blocks(26);
 
 		expect(result).toBe("JJRJJOOOOOO");
+	});
+
+	it("five_minutes_blocks should return JJRJJROOOOO when given 30", function() {
+		let result = berlin_clock.five_minutes_blocks(30);
+
+		expect(result).toBe("JJRJJROOOOO");
 	});
 });
