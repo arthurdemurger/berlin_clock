@@ -3,6 +3,7 @@ import { BerlinClock } from '../src/app.js';
 describe("Berlin Clock function", function() {
 	let berlin_clock = new BerlinClock();
 
+	// Test cases for simples_minutes function
 	it("simples_minutes should return OOOO when given 0", function() {
 		let result = berlin_clock.simples_minutes(0);
 
@@ -45,6 +46,7 @@ describe("Berlin Clock function", function() {
 		expect(result).toBe("JOOO");
 	});
 
+	// Test cases for five_minutes_blocks function
 	it("five_minutes_blocks should return OOOOOOOOOOO when given 0", function() {
 		let result = berlin_clock.five_minutes_blocks(0);
 
@@ -79,6 +81,18 @@ describe("Berlin Clock function", function() {
 		let result = berlin_clock.five_minutes_blocks(11);
 
 		expect(result).toBe("JJOOOOOOOOO");
+	});
+
+	it("five_minutes_blocks should return JJOOOOOOOOO when given 11", function() {
+		let result = berlin_clock.five_minutes_blocks(11);
+
+		expect(result).toBe("JJOOOOOOOOO");
+	});
+
+	it("five_minutes_blocks should return JJROOOOOOOO when given 15", function() {
+		let result = berlin_clock.five_minutes_blocks(15);
+
+		expect(result).toBe("JJROOOOOOOO");
 	});
 
 });
