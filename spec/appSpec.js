@@ -121,4 +121,9 @@ describe("Berlin Clock function", function() {
 		let result = berlin_clock.five_hours_blocks(20);
 		expect(result).toBe("RRRR");
 	});
+
+	it("five_hours_blocks should return OOOO when given 25", function() {
+		let result = berlin_clock.five_hours_blocks(25);
+		expect(result).toBe("OOOO");
+	});
 });

@@ -9,20 +9,24 @@ export class BerlinClock {
 	}
 
 	five_hours_blocks(time_in_hours) {
-		if (time_in_hours === 5) {
-			return ("ROOO");
+		if (time_in_hours >= 25) {
+			return ("OOOO");
 		}
 
-		if (time_in_hours === 10) {
+		if (time_in_hours >= 20) {
+			return ("RRRR");
+		}
+
+		if (time_in_hours >= 15) {
+			return ("RRRO");
+		}
+
+		if (time_in_hours >= 10) {
 			return ("RROO");
 		}
 
-		if (time_in_hours === 15) {
-			return "RRRO";
-		}
-
-		if (time_in_hours === 20) {
-			return "RRRR";
+		if (time_in_hours >= 5) {
+			return ("ROOO");
 		}
 
 		return ("OOOO");
