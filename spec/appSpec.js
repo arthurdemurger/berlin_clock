@@ -32,4 +32,10 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJJ");
 	});
+
+	it("should return O\nOOOO\nOOOO\nJOOOOOOOOOO\nOOOO when given 5", function() {
+		let result = berlin_clock.convert_to_berlin_time(5);
+
+		expect(result).toBe("O\nOOOO\nOOOO\nJOOOOOOOOOO\nOOOO");
+	});
 });
