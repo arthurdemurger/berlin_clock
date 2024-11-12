@@ -39,4 +39,11 @@ describe("Berlin Clock function", function() {
 		expect(result).toBe("OOOO");
 	});
 
+	it("should return JOOO when given 6", function() {
+		let result = berlin_clock.simples_minutes(6);
+
+		expect(result).toBe("JOOO");
+	});
+
+
 });

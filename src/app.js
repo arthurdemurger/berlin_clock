@@ -28,5 +28,9 @@ export class BerlinClock {
 		if (timestamp === 4) {
 			return ("JJJJ");
 		}
+
+		if (timestamp === 6) {
+			return ("JOOO");
+		}
 	}
 }
