@@ -26,4 +26,10 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJO");
 	});
+
+	it("should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJJ when given 4", function() {
+		let result = berlin_clock.convert_to_berlin_time(4);
+
+		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJJ");
+	});
 });
