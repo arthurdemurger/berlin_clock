@@ -8,8 +8,9 @@ export class BerlinClock {
 		return (berlin_time);
 	}
 
-	simples_minutes(timestamp) {
-		const minutes = timestamp % 5;
+
+	simples_minutes(time_in_minutes) {
+		const minutes = time_in_minutes % 5;
 
 		if (minutes === 0) {
 			return ("OOOO");
