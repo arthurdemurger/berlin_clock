@@ -8,4 +8,10 @@ describe("Berlin Clock function", function() {
 	
 		expect(result).toBe("R");
 	});
+
+	it("should return odd when the seconds are 1", function() {
+		let result = berlin_clock.seconds(1);
+	
+		expect(result).toBe("O");
+	});
 });
