@@ -1,26 +1,32 @@
 export class BerlinClock {
 
 	convert_to_berlin_time(timestamp) {
+		let berlin_time = "O\nOOOO\nOOOO\nOOOOOOOOOOO\n";
+
+		berlin_time += this.simples_minutes(timestamp);
+
+		return (berlin_time);
+	}
+
+	simples_minutes(timestamp) {
+		if (timestamp % 5 === 0) {
+			return ("OOOO");
+		}
+
 		if (timestamp === 1) {
-			return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJOOO");
+			return ("JOOO");
 		}
 
 		if (timestamp === 2) {
-			return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJOO");
+			return ("JJOO");
 		}
 
 		if (timestamp === 3) {
-			return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJO");
+			return ("JJJO");
 		}
 
 		if (timestamp === 4) {
-			return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJJ");
+			return ("JJJJ");
 		}
-
-		if (timestamp === 5) {
-			return ("O\nOOOO\nOOOO\nJOOOOOOOOOO\nOOOO");
-		}
-
-		return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
 	}
 }

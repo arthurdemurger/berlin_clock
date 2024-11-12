@@ -3,39 +3,40 @@ import { BerlinClock } from '../src/app.js';
 describe("Berlin Clock function", function() {
 	let berlin_clock = new BerlinClock();
 
-	it("should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO when given 0", function() {
-		let result = berlin_clock.convert_to_berlin_time(0);
+	it("should return OOOO when given 0", function() {
+		let result = berlin_clock.simples_minutes(0);
 
-		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
+		expect(result).toBe("OOOO");
 	});
 
-	it("should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nJOOO when given 1", function() {
-		let result = berlin_clock.convert_to_berlin_time(1);
+	it("should return JOOO when given 1", function() {
+		let result = berlin_clock.simples_minutes(1);
 
-		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJOOO");
+		expect(result).toBe("JOOO");
 	});
 
-	it("should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJOO when given 2", function() {
-		let result = berlin_clock.convert_to_berlin_time(2);
+	it("should return JJOO when given 2", function() {
+		let result = berlin_clock.simples_minutes(2);
 
-		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJOO");
+		expect(result).toBe("JJOO");
 	});
 
-	it("should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJO when given 3", function() {
-		let result = berlin_clock.convert_to_berlin_time(3);
+	it("should return JJJO when given 3", function() {
+		let result = berlin_clock.simples_minutes(3);
 
-		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJO");
+		expect(result).toBe("JJJO");
 	});
 
-	it("should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJJ when given 4", function() {
-		let result = berlin_clock.convert_to_berlin_time(4);
+	it("should return JJJJ when given 4", function() {
+		let result = berlin_clock.simples_minutes(4);
 
-		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJJ");
+		expect(result).toBe("JJJJ");
 	});
 
-	it("should return O\nOOOO\nOOOO\nJOOOOOOOOOO\nOOOO when given 5", function() {
-		let result = berlin_clock.convert_to_berlin_time(5);
+	it("should return OOOO when given 5", function() {
+		let result = berlin_clock.simples_minutes(5);
 
-		expect(result).toBe("O\nOOOO\nOOOO\nJOOOOOOOOOO\nOOOO");
+		expect(result).toBe("OOOO");
 	});
+
 });
