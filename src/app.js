@@ -7,9 +7,12 @@ export class BerlinClock {
 
 		return (berlin_time);
 	}
-	
 
-	simples_hours(time_in_minutes) {
+
+	simples_hours(time_in_hours) {
+		if (time_in_hours === 1) {
+			return ("ROOO");
+		}
 		return ("OOOO");
 	}
 

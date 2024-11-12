@@ -59,9 +59,15 @@ describe("Berlin Clock function", function() {
 
 
 	it("simples_hours should return OOOO when given 0", function() {
-		let result = berlin_clock.five_minutes_blocks(0);
+		let result = berlin_clock.simples_hours(0);
 
 		expect(result).toBe("OOOO");
+	});
+
+	it("simples_hours should return OOOO when given 1", function() {
+		let result = berlin_clock.simples_hours(1);
+
+		expect(result).toBe("ROOO");
 	});
 
 });
