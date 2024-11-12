@@ -81,4 +81,10 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("RRRO");
 	});
+
+	it("simples_hours should return RRRR when given 4", function() {
+		let result = berlin_clock.simples_hours(4);
+
+		expect(result).toBe("RRRR");
+	});
 });
