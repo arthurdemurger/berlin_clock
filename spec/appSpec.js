@@ -105,4 +105,10 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("ROOO");
 	});
+
+	it("five_hours_blocks should return RROO when given 10", function() {
+		let result = berlin_clock.five_hours_blocks(10);
+
+		expect(result).toBe("RROO");
+	});
 });
