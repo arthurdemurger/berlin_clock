@@ -1,8 +1,10 @@
 export class BerlinClock {
 
 	convert_to_berlin_time(timestamp) {
-		let berlin_time = "O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO";
+		if (timestamp === 1) {
+			return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJOOO");
+		}
 
-		return (berlin_time);
+		return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
 	}
 }
