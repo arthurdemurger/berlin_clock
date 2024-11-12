@@ -3,6 +3,55 @@ export class BerlinClock {
 	convertToBerlinTime(timestamp) {
 	}
 
+	fiveHoursBlocks(time_in_hours) {
+		const hours = time_in_hours % 24;
+		const hours_blocks = Math.floor(hours / 5);
+
+		if (hours_blocks === 0) {
+			return ("OOOO");
+		}
+
+		if (hours_blocks === 1) {
+			return ("ROOO");
+		}
+
+		if (hours_blocks === 2) {
+			return ("RROO");
+		}
+
+		if (hours_blocks === 3) {
+			return ("RRRO");
+		}
+
+		if (hours_blocks === 4) {
+			return ("RRRR");
+		}
+	}
+
+	simpleHours(time_in_hours) {
+		const hours = time_in_hours % 5;
+
+		if (hours === 0) {
+			return ("OOOO");
+		}
+
+		if (hours === 1) {
+			return ("ROOO");
+		}
+
+		if (hours === 2) {
+			return ("RROO");
+		}
+
+		if (hours === 3) {
+			return ("RRRO");
+		}
+
+		if (hours === 4) {
+			return ("RRRR");
+		}
+	}
+
 	fiveMinutesBlocks(time_in_minutes) {
 		const fiveMinuteBlock = Math.floor(time_in_minutes / 5);
 
@@ -14,7 +63,6 @@ export class BerlinClock {
 
 		return minutes;
 	}
-
 
 	simpleMinutes(time_in_minutes) {
 		const minutes = time_in_minutes % 5;

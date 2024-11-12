@@ -196,4 +196,75 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("JJRJJRJJRJJ");
 	});
+
+	// Test cases for simpleHours function
+	it("simpleHours should return OOOO when given 0", function() {
+		let result = berlin_clock.simpleHours(0);
+
+		expect(result).toBe("OOOO");
+	});
+
+	it("simpleHours should return ROOO when given 1", function() {
+		let result = berlin_clock.simpleHours(1);
+
+		expect(result).toBe("ROOO");
+	});
+
+	it("simpleHours should return RROO when given 2", function() {
+		let result = berlin_clock.simpleHours(2);
+
+		expect(result).toBe("RROO");
+	});
+
+	it("simpleHours should return RRRO when given 3", function() {
+		let result = berlin_clock.simpleHours(3);
+
+		expect(result).toBe("RRRO");
+	});
+
+	it("simpleHours should return RRRR when given 4", function() {
+		let result = berlin_clock.simpleHours(4);
+
+		expect(result).toBe("RRRR");
+	});
+
+	it("simpleHours should return OOOO when given 5", function() {
+		let result = berlin_clock.simpleHours(5);
+
+		expect(result).toBe("OOOO");
+	});
+
+	// Test cases for fiveHoursBlocks function
+	it("fiveHoursBlocks should return OOOO when given 0", function() {
+		let result = berlin_clock.fiveHoursBlocks(0);
+
+		expect(result).toBe("OOOO");
+	});
+
+	it("fiveHoursBlocks should return ROOO when given 5", function() {
+		let result = berlin_clock.fiveHoursBlocks(5);
+
+		expect(result).toBe("ROOO");
+	});
+
+	it("fiveHoursBlocks should return RROO when given 10", function() {
+		let result = berlin_clock.fiveHoursBlocks(10);
+
+		expect(result).toBe("RROO");
+	});
+
+	it("fiveHoursBlocks should return RRRO when given 15", function() {
+		let result = berlin_clock.fiveHoursBlocks(15);
+		expect(result).toBe("RRRO");
+	});
+
+	it("fiveHoursBlocks should return RRRR when given 20", function() {
+		let result = berlin_clock.fiveHoursBlocks(20);
+		expect(result).toBe("RRRR");
+	});
+
+	it("fiveHoursBlocks should return OOOO when given 25", function() {
+		let result = berlin_clock.fiveHoursBlocks(25);
+		expect(result).toBe("OOOO");
+	});
 });
