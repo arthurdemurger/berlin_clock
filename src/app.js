@@ -10,8 +10,10 @@ export class BerlinClock {
 
 
 	simples_hours(time_in_hours) {
-		if (time_in_hours === 0 || time_in_hours === 5) {
-			return ("0000");
+		const hours = time_in_hours % 5;
+
+		if (hours === 0) {
+			return ("OOOO");
 		}
 
 		if (time_in_hours === 1) {
