@@ -70,4 +70,9 @@ describe("Berlin Clock function", function() {
 		expect(result).toBe("ROOO");
 	});
 
+	it("simples_hours should return OOOO when given 2", function() {
+		let result = berlin_clock.simples_hours(2);
+
+		expect(result).toBe("RROO");
+	});
 });

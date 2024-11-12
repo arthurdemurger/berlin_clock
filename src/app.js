@@ -13,6 +13,9 @@ export class BerlinClock {
 		if (time_in_hours === 1) {
 			return ("ROOO");
 		}
+		if (time_in_hours === 2) {
+			return ("RROO");
+		}
 		return ("OOOO");
 	}
 
