@@ -93,4 +93,10 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("OOOO");
 	});
+
+	it("five_hours_blocks should return OOOO when given 0", function() {
+		let result = berlin_clock.five_hours_blocks(0);
+
+		expect(result).toBe("OOOO");
+	});
 });

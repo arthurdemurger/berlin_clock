@@ -8,6 +8,9 @@ export class BerlinClock {
 		return (berlin_time);
 	}
 
+	five_hours_blocks(time_in_hours) {
+		return ("OOOO");
+	}
 
 	simples_hours(time_in_hours) {
 		const hours = time_in_hours % 5;
