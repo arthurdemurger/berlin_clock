@@ -3,6 +3,7 @@ import { BerlinClock } from '../src/app.js';
 describe("Berlin Clock function", function() {
 	let berlin_clock = new BerlinClock();
 
+	/***************************************/
 	// Test cases for simpleMinutes function
 	it("simpleMinutes should return OOOO when given 0", function() {
 		let result = berlin_clock.simpleMinutes(0);
@@ -46,6 +47,7 @@ describe("Berlin Clock function", function() {
 		expect(result).toBe("JOOO");
 	});
 
+	/*******************************************/
 	// Test cases for fiveMinutesBlocks function
 	it("fiveMinutesBlocks should return OOOOOOOOOOO when given 0", function() {
 		let result = berlin_clock.fiveMinutesBlocks(0);
@@ -197,6 +199,7 @@ describe("Berlin Clock function", function() {
 		expect(result).toBe("JJRJJRJJRJJ");
 	});
 
+	/*****************************************/
 	// Test cases for simpleHours function
 	it("simpleHours should return OOOO when given 0", function() {
 		let result = berlin_clock.simpleHours(0);
@@ -234,6 +237,7 @@ describe("Berlin Clock function", function() {
 		expect(result).toBe("OOOO");
 	});
 
+	/*****************************************/
 	// Test cases for fiveHoursBlocks function
 	it("fiveHoursBlocks should return OOOO when given 0", function() {
 		let result = berlin_clock.fiveHoursBlocks(0);
@@ -266,5 +270,25 @@ describe("Berlin Clock function", function() {
 	it("fiveHoursBlocks should return OOOO when given 25", function() {
 		let result = berlin_clock.fiveHoursBlocks(25);
 		expect(result).toBe("OOOO");
+	});
+
+	/*********************************/
+	// Test cases for seconds function
+	it("should return R when the seconds are 0", function() {
+		let result = berlin_clock.seconds(0);
+
+		expect(result).toBe("R");
+	});
+
+	it("should return O when the seconds are 1", function() {
+		let result = berlin_clock.seconds(1);
+
+		expect(result).toBe("O");
+	});
+
+	it("should return O when the seconds are 2", function() {
+		let result = berlin_clock.seconds(2);
+
+		expect(result).toBe("R");
 	});
 });
