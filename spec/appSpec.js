@@ -111,4 +111,9 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("RROO");
 	});
+
+	it("five_hours_blocks should return RRRO when given 15", function() {
+		let result = berlin_clock.five_hours_blocks(15);
+		expect(result).toBe("RRRO");
+	});
 });
