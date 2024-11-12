@@ -20,4 +20,10 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJOO");
 	});
+
+	it("should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJO when given 3", function() {
+		let result = berlin_clock.convert_to_berlin_time(3);
+
+		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJJO");
+	});
 });
