@@ -100,4 +100,10 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("JJROOOOOOOO");
 	});
+
+	it("five_minutes_blocks should return JJRJOOOOOOO when given 20", function() {
+		let result = berlin_clock.five_minutes_blocks(20);
+
+		expect(result).toBe("JJRJOOOOOOO");
+	});
 });
