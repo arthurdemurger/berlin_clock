@@ -13,9 +13,15 @@ export class BerlinClock {
 		if (time_in_hours === 1) {
 			return ("ROOO");
 		}
+		
 		if (time_in_hours === 2) {
 			return ("RROO");
 		}
+
+		if (time_in_hours === 3) {
+			return ("RRRO");
+		}
+
 		return ("OOOO");
 	}
 
