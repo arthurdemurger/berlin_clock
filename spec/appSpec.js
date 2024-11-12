@@ -3,196 +3,196 @@ import { BerlinClock } from '../src/app.js';
 describe("Berlin Clock function", function() {
 	let berlin_clock = new BerlinClock();
 
-	// Test cases for simples_minutes function
-	it("simples_minutes should return OOOO when given 0", function() {
-		let result = berlin_clock.simples_minutes(0);
+	// Test cases for simpleMinutes function
+	it("simpleMinutes should return OOOO when given 0", function() {
+		let result = berlin_clock.simpleMinutes(0);
 
 		expect(result).toBe("OOOO");
 	});
 
-	it("simples_minutes should return JOOO when given 1", function() {
-		let result = berlin_clock.simples_minutes(1);
+	it("simpleMinutes should return JOOO when given 1", function() {
+		let result = berlin_clock.simpleMinutes(1);
 
 		expect(result).toBe("JOOO");
 	});
 
-	it("simples_minutes should return JJOO when given 2", function() {
-		let result = berlin_clock.simples_minutes(2);
+	it("simpleMinutes should return JJOO when given 2", function() {
+		let result = berlin_clock.simpleMinutes(2);
 
 		expect(result).toBe("JJOO");
 	});
 
-	it("simples_minutes should return JJJO when given 3", function() {
-		let result = berlin_clock.simples_minutes(3);
+	it("simpleMinutes should return JJJO when given 3", function() {
+		let result = berlin_clock.simpleMinutes(3);
 
 		expect(result).toBe("JJJO");
 	});
 
-	it("simples_minutes should return JJJJ when given 4", function() {
-		let result = berlin_clock.simples_minutes(4);
+	it("simpleMinutes should return JJJJ when given 4", function() {
+		let result = berlin_clock.simpleMinutes(4);
 
 		expect(result).toBe("JJJJ");
 	});
 
-	it("simples_minutes should return OOOO when given 5", function() {
-		let result = berlin_clock.simples_minutes(5);
+	it("simpleMinutes should return OOOO when given 5", function() {
+		let result = berlin_clock.simpleMinutes(5);
 
 		expect(result).toBe("OOOO");
 	});
 
-	it("simples_minutes should return JOOO when given 6", function() {
-		let result = berlin_clock.simples_minutes(6);
+	it("simpleMinutes should return JOOO when given 6", function() {
+		let result = berlin_clock.simpleMinutes(6);
 
 		expect(result).toBe("JOOO");
 	});
 
-	// Test cases for five_minutes_blocks function
-	it("five_minutes_blocks should return OOOOOOOOOOO when given 0", function() {
-		let result = berlin_clock.five_minutes_blocks(0);
+	// Test cases for fiveMinutesBlocks function
+	it("fiveMinutesBlocks should return OOOOOOOOOOO when given 0", function() {
+		let result = berlin_clock.fiveMinutesBlocks(0);
 
 		expect(result).toBe("OOOOOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return OOOOOOOOOOO when given 1", function() {
-		let result = berlin_clock.five_minutes_blocks(1);
+	it("fiveMinutesBlocks should return OOOOOOOOOOO when given 1", function() {
+		let result = berlin_clock.fiveMinutesBlocks(1);
 
 		expect(result).toBe("OOOOOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JOOOOOOOOOO when given 5", function() {
-		let result = berlin_clock.five_minutes_blocks(5);
+	it("fiveMinutesBlocks should return JOOOOOOOOOO when given 5", function() {
+		let result = berlin_clock.fiveMinutesBlocks(5);
 
 		expect(result).toBe("JOOOOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JOOOOOOOOOO when given 6", function() {
-		let result = berlin_clock.five_minutes_blocks(6);
+	it("fiveMinutesBlocks should return JOOOOOOOOOO when given 6", function() {
+		let result = berlin_clock.fiveMinutesBlocks(6);
 
 		expect(result).toBe("JOOOOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJOOOOOOOOO when given 10", function() {
-		let result = berlin_clock.five_minutes_blocks(10);
+	it("fiveMinutesBlocks should return JJOOOOOOOOO when given 10", function() {
+		let result = berlin_clock.fiveMinutesBlocks(10);
 
 		expect(result).toBe("JJOOOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJOOOOOOOOO when given 11", function() {
-		let result = berlin_clock.five_minutes_blocks(11);
+	it("fiveMinutesBlocks should return JJOOOOOOOOO when given 11", function() {
+		let result = berlin_clock.fiveMinutesBlocks(11);
 
 		expect(result).toBe("JJOOOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJOOOOOOOOO when given 11", function() {
-		let result = berlin_clock.five_minutes_blocks(11);
+	it("fiveMinutesBlocks should return JJOOOOOOOOO when given 11", function() {
+		let result = berlin_clock.fiveMinutesBlocks(11);
 
 		expect(result).toBe("JJOOOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJROOOOOOOO when given 15", function() {
-		let result = berlin_clock.five_minutes_blocks(15);
+	it("fiveMinutesBlocks should return JJROOOOOOOO when given 15", function() {
+		let result = berlin_clock.fiveMinutesBlocks(15);
 
 		expect(result).toBe("JJROOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJROOOOOOOO when given 16", function() {
-		let result = berlin_clock.five_minutes_blocks(16);
+	it("fiveMinutesBlocks should return JJROOOOOOOO when given 16", function() {
+		let result = berlin_clock.fiveMinutesBlocks(16);
 
 		expect(result).toBe("JJROOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJOOOOOOO when given 20", function() {
-		let result = berlin_clock.five_minutes_blocks(20);
+	it("fiveMinutesBlocks should return JJRJOOOOOOO when given 20", function() {
+		let result = berlin_clock.fiveMinutesBlocks(20);
 
 		expect(result).toBe("JJRJOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJOOOOOOO when given 21", function() {
-		let result = berlin_clock.five_minutes_blocks(21);
+	it("fiveMinutesBlocks should return JJRJOOOOOOO when given 21", function() {
+		let result = berlin_clock.fiveMinutesBlocks(21);
 
 		expect(result).toBe("JJRJOOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJJOOOOOO when given 25", function() {
-		let result = berlin_clock.five_minutes_blocks(25);
+	it("fiveMinutesBlocks should return JJRJJOOOOOO when given 25", function() {
+		let result = berlin_clock.fiveMinutesBlocks(25);
 
 		expect(result).toBe("JJRJJOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJJOOOOOO when given 26", function() {
-		let result = berlin_clock.five_minutes_blocks(26);
+	it("fiveMinutesBlocks should return JJRJJOOOOOO when given 26", function() {
+		let result = berlin_clock.fiveMinutesBlocks(26);
 
 		expect(result).toBe("JJRJJOOOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJJROOOOO when given 30", function() {
-		let result = berlin_clock.five_minutes_blocks(30);
+	it("fiveMinutesBlocks should return JJRJJROOOOO when given 30", function() {
+		let result = berlin_clock.fiveMinutesBlocks(30);
 
 		expect(result).toBe("JJRJJROOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJJROOOOO when given 31", function() {
-		let result = berlin_clock.five_minutes_blocks(31);
+	it("fiveMinutesBlocks should return JJRJJROOOOO when given 31", function() {
+		let result = berlin_clock.fiveMinutesBlocks(31);
 
 		expect(result).toBe("JJRJJROOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJJROOOOO when given 35", function() {
-		let result = berlin_clock.five_minutes_blocks(35);
+	it("fiveMinutesBlocks should return JJRJJROOOOO when given 35", function() {
+		let result = berlin_clock.fiveMinutesBlocks(35);
 
 		expect(result).toBe("JJRJJRJOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJJROOOOO when given 36", function() {
-		let result = berlin_clock.five_minutes_blocks(36);
+	it("fiveMinutesBlocks should return JJRJJROOOOO when given 36", function() {
+		let result = berlin_clock.fiveMinutesBlocks(36);
 
 		expect(result).toBe("JJRJJRJOOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJJRJJOOO when given 40", function() {
-		let result = berlin_clock.five_minutes_blocks(40);
+	it("fiveMinutesBlocks should return JJRJJRJJOOO when given 40", function() {
+		let result = berlin_clock.fiveMinutesBlocks(40);
 
 		expect(result).toBe("JJRJJRJJOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJJRJJOOO when given 41", function() {
-		let result = berlin_clock.five_minutes_blocks(41);
+	it("fiveMinutesBlocks should return JJRJJRJJOOO when given 41", function() {
+		let result = berlin_clock.fiveMinutesBlocks(41);
 
 		expect(result).toBe("JJRJJRJJOOO");
 	});
 
-	it("five_minutes_blocks should return JJRJJRJJROO when given 45", function() {
-		let result = berlin_clock.five_minutes_blocks(45);
+	it("fiveMinutesBlocks should return JJRJJRJJROO when given 45", function() {
+		let result = berlin_clock.fiveMinutesBlocks(45);
 
 		expect(result).toBe("JJRJJRJJROO");
 	});
 
-	it("five_minutes_blocks should return JJRJJRJJROO when given 46", function() {
-		let result = berlin_clock.five_minutes_blocks(46);
+	it("fiveMinutesBlocks should return JJRJJRJJROO when given 46", function() {
+		let result = berlin_clock.fiveMinutesBlocks(46);
 
 		expect(result).toBe("JJRJJRJJROO");
 	});
 
-	it("five_minutes_blocks should return JJRJJRJJRJO when given 50", function() {
-		let result = berlin_clock.five_minutes_blocks(50);
+	it("fiveMinutesBlocks should return JJRJJRJJRJO when given 50", function() {
+		let result = berlin_clock.fiveMinutesBlocks(50);
 
 		expect(result).toBe("JJRJJRJJRJO");
 	});
 
-	it("five_minutes_blocks should return JJRJJRJJRJO when given 51", function() {
-		let result = berlin_clock.five_minutes_blocks(51);
+	it("fiveMinutesBlocks should return JJRJJRJJRJO when given 51", function() {
+		let result = berlin_clock.fiveMinutesBlocks(51);
 
 		expect(result).toBe("JJRJJRJJRJO");
 	});
 
-	it("five_minutes_blocks should return JJRJJRJJRJJ when given 55", function() {
-		let result = berlin_clock.five_minutes_blocks(55);
+	it("fiveMinutesBlocks should return JJRJJRJJRJJ when given 55", function() {
+		let result = berlin_clock.fiveMinutesBlocks(55);
 
 		expect(result).toBe("JJRJJRJJRJJ");
 	});
 
-	it("five_minutes_blocks should return JJRJJRJJRJJ when given 56", function() {
-		let result = berlin_clock.five_minutes_blocks(56);
+	it("fiveMinutesBlocks should return JJRJJRJJRJJ when given 56", function() {
+		let result = berlin_clock.fiveMinutesBlocks(56);
 
 		expect(result).toBe("JJRJJRJJRJJ");
 	});
