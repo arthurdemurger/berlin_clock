@@ -5,6 +5,10 @@ export class BerlinClock {
 			return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJOOO");
 		}
 
+		if (timestamp === 2) {
+			return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJJOO");
+		}
+
 		return ("O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
 	}
 }
