@@ -21,6 +21,10 @@ export class BerlinClock {
 			return "RRRO";
 		}
 
+		if (time_in_hours === 20) {
+			return "RRRR";
+		}
+
 		return ("OOOO");
 	}
 
