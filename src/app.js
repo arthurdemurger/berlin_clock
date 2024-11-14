@@ -4,8 +4,9 @@ export class BerlinClock {
 		const time = timestamp.split(":");
 
 		const seconds = parseInt(time[2]);
+		const minutes = parseInt(time[1]);
 
-		const berlinTime = this.seconds(seconds) + "\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO";
+		const berlinTime = this.seconds(seconds) + "\nOOOO\nOOOO\nOOOOOOOOOOO\n" + this.simpleMinutes(minutes);
 
 		return (berlinTime);
 	}

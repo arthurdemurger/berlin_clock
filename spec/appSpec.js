@@ -311,4 +311,10 @@ describe("Berlin Clock function", function() {
 
 		expect(result).toBe("R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
 	});
+
+	it("convertToBerlinTime should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nJOOO when the time is 00:01:01", function() {
+		let result = berlin_clock.convertToBerlinTime("00:01:01");
+
+		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nJOOO");
+	});
 });
