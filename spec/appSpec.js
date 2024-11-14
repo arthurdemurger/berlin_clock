@@ -274,19 +274,19 @@ describe("Berlin Clock function", function() {
 
 	/*********************************/
 	// Test cases for seconds function
-	it("should return R when the seconds are 0", function() {
+	it("seconds should return R when the seconds are 0", function() {
 		let result = berlin_clock.seconds(0);
 
 		expect(result).toBe("R");
 	});
 
-	it("should return O when the seconds are 1", function() {
+	it("seconds should return O when the seconds are 1", function() {
 		let result = berlin_clock.seconds(1);
 
 		expect(result).toBe("O");
 	});
 
-	it("should return O when the seconds are 2", function() {
+	it("seconds should return O when the seconds are 2", function() {
 		let result = berlin_clock.seconds(2);
 
 		expect(result).toBe("R");
@@ -294,15 +294,21 @@ describe("Berlin Clock function", function() {
 
 	/*********************************/
 	// Test cases for convertToBerlinTime function
-	it("should return R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO when the time is 00:00:00", function() {
+	it("convertToBerlinTime should return R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO when the time is 00:00:00", function() {
 		let result = berlin_clock.convertToBerlinTime("00:00:00");
 
 		expect(result).toBe("R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
 	});
 
-	it("should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO when the time is 00:00:01", function() {
+	it("convertToBerlinTime should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO when the time is 00:00:01", function() {
 		let result = berlin_clock.convertToBerlinTime("00:00:01");
 
 		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
+	});
+
+	it("convertToBerlinTime should return R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO when the time is 00:00:02", function() {
+		let result = berlin_clock.convertToBerlinTime("00:00:02");
+
+		expect(result).toBe("R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
 	});
 });
