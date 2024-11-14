@@ -26,7 +26,7 @@ For a given time, let's say **13:17:01** (1:17:01 PM):
 
 This configuration thus represents the time 13:17:01.
 
-## Auteurs
+## Authors
 
 **Group 01**
 - Demurger Arthur
