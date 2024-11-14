@@ -1,7 +1,13 @@
 export class BerlinClock {
 
 	convertToBerlinTime(timestamp) {
-		return ("R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
+		const time = timestamp.split(":");
+
+		const seconds = parseInt(time[2]);
+
+		const berlinTime = this.seconds(seconds) + "\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO";
+
+		return (berlinTime);
 	}
 
 	fiveHoursBlocks(time_in_hours) {
