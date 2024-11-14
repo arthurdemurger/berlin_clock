@@ -300,4 +300,9 @@ describe("Berlin Clock function", function() {
 		expect(result).toBe("R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
 	});
 
+	it("should return O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO when the time is 00:00:01", function() {
+		let result = berlin_clock.convertToBerlinTime("00:00:01");
+
+		expect(result).toBe("O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
+	});
 });
