@@ -6,7 +6,7 @@ export class BerlinClock {
 		const seconds = parseInt(time[2]);
 		const minutes = parseInt(time[1]);
 
-		const berlinTime = this.seconds(seconds) + "\nOOOO\nOOOO\nOOOOOOOOOOO\n" + this.simpleMinutes(minutes);
+		const berlinTime = this.seconds(seconds) + "\nOOOO\nOOOO\n" + this.fiveMinutesBlocks(minutes) + "\n" + this.simpleMinutes(minutes);
 
 		return (berlinTime);
 	}
