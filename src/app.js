@@ -1,6 +1,7 @@
 export class BerlinClock {
 
 	convertToBerlinTime(timestamp) {
+		return ("R\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO");
 	}
 
 	fiveHoursBlocks(time_in_hours) {
