@@ -14,4 +14,10 @@ describe("Berlin Clock function", function() {
 	
 		expect(result).toBe("O");
 	});
+
+	it("should return odd when the seconds are 2", function() {
+		let result = berlin_clock.seconds(2);
+	
+		expect(result).toBe("R");
+	});
 });
